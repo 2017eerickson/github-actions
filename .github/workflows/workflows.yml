@@ -9,7 +9,7 @@ on:
       -main
   
 jobs: 
-  Test with jest:
+  Test:
     runs-on: ubuntu-latest
 
     steps:
