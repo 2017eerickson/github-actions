@@ -1,0 +1,24 @@
+name: Calculator.py workflow test
+
+on:
+  pull:
+
+  pull_request:
+  branches:
+    - main
+  
+  workflow_dispatch:
+
+jobs:
+  Test:
+    runs-on: ubuntu:latest
+
+    steps:
+      - name: Clone repo
+        uses: actions/checkout@v4
+
+      - name: Build docker img
+        run: docker build -t pytest-tests
+
+      - name: Run docker container
+        run: docker run --rm pytest-tests
