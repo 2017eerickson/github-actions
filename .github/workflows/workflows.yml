@@ -14,11 +14,11 @@ jobs:
     runs-on: ubuntu:latest
 
     steps:
-      name: Clone repo
+    - name: Clone repo
       uses: actions/checkout/@v4
 
-      name: Build docker img
+    - name: Build docker img
       run: docker build -t jest-test . 
 
-      name: build docker img
+    - name: build docker img
       run: docker run --rm jest-test 
