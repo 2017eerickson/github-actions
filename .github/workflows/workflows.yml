@@ -3,13 +3,14 @@ name: Github actions work flow
 on:
   push:
     branches:
-      -dev
+      - dev
   pull_request:
     branches:
-      -main
+      - main
+  workflow_dispatch:
   
 jobs: 
-  Test:
+  test:
     runs-on: ubuntu-latest
 
     steps:
@@ -17,7 +18,7 @@ jobs:
         uses: actions/checkout@v4
       
       - name: Build docker img
-        run: "docker build -t workflows-test"
+        run: "docker build -t workflows-test . "
       
       - name: Run docker container
         run: "docker run --rm workflow-test"
