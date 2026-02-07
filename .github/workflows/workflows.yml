@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  Test with Jest:
+  Test:
     runs-on: ubuntu:latest
 
     steps:
