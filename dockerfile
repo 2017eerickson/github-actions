@@ -8,6 +8,6 @@ RUN npm install
 
 RUN npm install --save-dev jest
 
-COPY ..
+COPY . .
 
 CMD ["npm" , "test"]
