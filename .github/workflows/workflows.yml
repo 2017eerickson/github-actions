@@ -9,9 +9,17 @@ on:
       -main
   
 jobs: 
-  Test with pytest:
-  runs-on: ubuntu-latest
+  Test with jest:
+    runs-on: ubuntu-latest
 
-  steps:
-    - name: 
+    steps:
+      - name: Clone repo
+        uses: actions/checkout@v4
+      
+      - name: Build docker img
+        run: "docker build -t workflows-test"
+      
+      - name: Run docker container
+        run: "docker run --rm workflow-test"
+        
     
