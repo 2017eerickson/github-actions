@@ -18,7 +18,7 @@ jobs:
       uses: actions/checkout/@v4
 
       name: Build docker img
-      run: "docker build -t jest-test . "
+      run: docker build -t jest-test . 
 
       name: build docker img
-      run: "docker run --rm jest-test "
+      run: docker run --rm jest-test 
