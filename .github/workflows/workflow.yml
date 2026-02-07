@@ -1,0 +1,16 @@
+name: Roman-algo.py test with github actions 
+
+on:
+  push:
+
+  pull_request:
+    branches:
+    - main
+
+jobs:
+  test:
+    runs-on: ubuntu:latest
+
+    steps:
+      - name: CLone repo
+        uses: actions/checkout@v4
