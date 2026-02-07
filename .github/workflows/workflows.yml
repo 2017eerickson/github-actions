@@ -21,4 +21,4 @@ jobs:
       run: "docker build -t jest-test . "
 
       name: build docker img
-      run: "docker run --rm jest-test ."
+      run: "docker run --rm jest-test "
