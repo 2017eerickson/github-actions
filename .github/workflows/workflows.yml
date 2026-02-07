@@ -1,0 +1,17 @@
+name: Github actions work flow
+
+on:
+  push:
+    branches:
+      -dev
+  pull_requests:
+    branches:
+      -main
+  
+jobs: 
+  Test with pytest:
+  runs-on: ubuntu-latest
+
+  steps:
+    - name: 
+    
